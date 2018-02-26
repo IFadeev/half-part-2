@@ -1,27 +1,27 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Projects</h1>
+<div>
+	<h1 class="header">Задачи</h1>
+	<a id="add_todo_pls" href="#">
+		<img src="/assets/addTodoIcon.png" alt="Добавить задачу">
+	</a>
+</div>
+<% @projects.each do |project| %>
+<h2><%=project.title%></h2>
+<ul>
+  <%project.todos.each do |todo|%>
+  <li><%=todo.text%></li>
+  <%end%>
+</ul>
+<% end %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.title %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<div class="create-form" id="create-form" hidden="hidden">
+	<%= content_tag(:h2, "НОВАЯ ЗАДАЧА") %>
+    <%= form_tag("todos#create", method:"post", id:"create_todo_form") do %>
+    <%= text_field(:todo, :text, :placeholder => ' Название задачи...',:class => 'todo_name_input') %><br>
+    <%= select_tag("selected_project", options_from_collection_for_select(@projects, "id", "title"), 
+    :id => 'project_selection', :class => 'project_selection')%><br>
+    <%= link_to('ОТМЕНА', '#', :id => 'link_close', :class => 'link_close')%>
+    <%= link_to('OK', '#', :id => 'link_create', :class => 'link_create')%>
     <% end %>
-  </tbody>
-</table>
+ </div>
 
-<br>
-
-<%= link_to 'New Project', new_project_path %>
