@@ -16,3 +16,4 @@ seed_file[:projects].each {
 	  todo = project.todos.create(:text => key2["text"], :isCompleted => key2["isCompleted"])
 		}
   }
+

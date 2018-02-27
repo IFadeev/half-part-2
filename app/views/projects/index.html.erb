@@ -1,10 +1,15 @@
 
-<div>
+
+
+
+<div class="header">
 	<h1 class="header">Задачи</h1>
 	<a id="add_todo_pls" href="#">
-		<img src="/assets/addTodoIcon.png" alt="Добавить задачу">
+		<%= image_tag "/assets/addTodoIcon.png"%>
 	</a>
 </div>
+
+
 <% @projects.each do |project| %>
 <h2><%=project.title%></h2>
 <ul>
