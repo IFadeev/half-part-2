@@ -1,0 +1,204 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require 'vendor/icheck/square/blue.scss'
+ *= require 'vendor/select2.min.css'
+ */
+
+/*fonts-------------------------------------------------*/
+
+ @font-face {
+  font-family: 'OpenSans-Light';
+  src: font-url('icomoon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+ @font-face {
+  font-family: 'OpenSans-Regular';
+  src: font-url('OpenSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+ }
+
+ @font-face {
+  font-family: 'OpenSans-Semibold';
+  src: font-url('OpenSans-Semibold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+ }
+
+body {
+  background-color: rgb(241, 241, 241);
+}
+
+h2 {
+  padding: 15px 15px 0; 
+  font-size: 10px;
+  font-weight: 600;
+  font-family: 'OpenSans-Semibold';
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+ }
+
+h3 {
+  margin: 0px;
+  font-size: 10px;
+  font-weight: 600;
+  text-align: center;
+  font-family: 'OpenSans-Semibold';
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.header {
+  position: relative;
+  height: 80px;
+  text-align: center;
+  background-color: #3079ed;
+  box-shadow: 0px 1px 1px 1px rgb(200,200,200);
+ }
+
+ .header .title {
+  position: absolute;
+  top: 5px;
+  left: 46%;
+  color: #fff;
+  font-family: 'OpenSans-Semibold';
+  font-size: 24px;
+ }
+
+.todo_icon {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  float:right;
+ }
+
+.projects_block {
+  background-color: #fff;
+  box-shadow: 0px 2px 1px 1px rgb(200,200,200);
+ }
+ 
+.checked {
+  text-decoration: line-through;
+ }
+
+.todos {
+  padding-bottom: 20px;
+  margin: 20px 30px;
+ }
+
+.todo_text {
+  margin-top: 10px;
+  margin-left: 15px;
+  font-weight: normal;
+  width:70%;
+ }
+
+.checkbox {
+  float:left;
+  width:22px;
+ }
+
+ .background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  display: none;
+}
+
+.menu {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 360px;
+  height: 245px;
+  background-color: white;
+  padding: 15px;
+}
+
+.todo_name_input {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 1em;
+  padding-left: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #A4A4A4;
+}
+
+.select2-container--default {
+  width: 100% !important;
+  margin-bottom: 1em;
+}
+
+.select2-selection, .select2-selection__rendered, .select2-selection__arrow {
+   height: 40px !important;
+   span {
+       line-height: 40px !important;
+       text-align: left;
+   }
+}
+
+.select2-selection, {
+   border-radius: 0 !important;
+}
+
+.project_selection {
+  width: 100%;
+}
+
+.link_close, .link_create {
+  display: inline-block;
+  width: 160px;
+  height: 40px;
+  background-color: rgb(130, 130, 120);
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+.link_close:hover, .link_create:hover {
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  box-shadow: 0 1px rgba(0,0,0,0.3);
+}
+
+.link_create:hover {
+  border: 1px solid #2f5bb7;
+  background-color: #357ae8;
+  background-image: linear-gradient(top,#4d90fe,#357ae8);
+  float: right;
+}
+
+.link_close:hover {
+  border-color: #585858;
+  background-color: #6E6E6E;
+  float: left;
+}
+
+.link_create {  
+  float: right;
+  border: 1px solid #3079ed;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1);
+  background-color: #4d90fe;
+}
+
