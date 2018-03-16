@@ -4,6 +4,7 @@ class TodosController < ApplicationController
   def update
     Todo.find(params[:commit]).update(isCompleted:params[:isCompleted])
     redirect_to :root
+    
   end
   
   def create
