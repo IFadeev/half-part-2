@@ -6,7 +6,7 @@ projects:
     - text: 'Заменить масло в двигателе до 23 апреля'
       isCompleted: false
     - text: 'Отправить письмо бабушке'
-      isCompleted: true
+      isCompleted: false
     - text: 'Заплатить за квартиру'
       isCompleted: false
     - text: 'Забрать обувь из ремонта'
@@ -14,9 +14,9 @@ projects:
  - title: 'Работа'
    todos:
     - text: 'Позвонить заказчику'
-      isCompleted: true
+      isCompleted: false
     - text: 'Отправить документы'
-      isCompleted: true
+      isCompleted: false
     - text: 'Заполнить отчет'
       isCompleted: false
  - title: 'Прочее'
